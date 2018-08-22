@@ -42,6 +42,14 @@ public class Fila {
         this.data = b;
     }
 
+    public  int showFirst(){
+        return this.first;
+    }
+
+    public int showLast(){
+        return this.data[this.size()];
+    }
+
     public int size() {
         return this.qtd;
     }
@@ -57,9 +65,21 @@ public class Fila {
     public static void main(String[] args) throws EListaVazia {
         Fila f = new Fila();
         System.out.println(f.size());
+        f.enqueue(1);
+        f.enqueue(2);
+        f.enqueue(3);
+        f.enqueue(4);
         f.enqueue(5);
+        f.enqueue(6);
+        f.enqueue(7);
+        f.enqueue(8);
+        f.enqueue(9);
+        f.enqueue(10);
+        f.enqueue(11);
         System.out.println(f.size());
         System.out.println(f.dequeue());
         System.out.println(f.size());
+        System.out.println(f.showFirst());
+        System.out.println(f.showLast());
     }
 }
